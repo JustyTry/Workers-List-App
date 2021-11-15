@@ -21,7 +21,7 @@ export default class ProfilePage extends React.Component {
         this.setState({
           record: data,
         });
-        console.log(this.state);
+     
       })
       .catch(function (error) {
         console.log(error);
@@ -47,7 +47,6 @@ export default class ProfilePage extends React.Component {
     }
     const date = new Date(this.state.record.birthday);
     var phone = this.state.record.phone;
-    console.log(phone);
     const months = [
       'Января',
       'Февраля',
