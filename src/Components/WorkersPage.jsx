@@ -103,7 +103,7 @@ export default class WorkersPage extends React.Component {
               new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth() !== 0 &&
               new Date(a.birthday).getMonth() - new Date().getMonth() >= 0
             ) {
-              console.log('h');
+              
               return new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth();
             } else {
               if (new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth() !== 0) {
