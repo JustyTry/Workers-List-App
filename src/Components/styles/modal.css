@@ -1,0 +1,109 @@
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(151, 151, 155, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal-window {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 30%;
+  background: white;
+  height: 200px;
+  width: 420px;
+  border-radius: 20px;
+  position: relative;
+}
+.modal-header {
+  align-items: center;
+  text-align: center;
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+.modal-body {
+  font-size: 16px;
+  font-weight: bold;
+}
+.cross-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  margin-right: 35px;
+  margin-top: 25px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.modal-radio1 {
+  padding-left: 15px;
+  padding-bottom: 40px;
+}
+.modal-radio1 label {
+  padding-left: 20px;
+}
+.modal-radio1 input[type='radio']:after {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(101, 52, 255);
+}
+
+input[type='radio']:checked:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 15px;
+
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 5px solid rgb(101, 52, 255);
+}
+.modal-radio2 {
+  padding-left: 15px;
+}
+.modal-radio2 label {
+  padding-left: 20px;
+}
+.modal-radio2 input[type='radio']:after {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid rgb(101, 52, 255);
+}
+.modal-radio2 input[type='radio']:checked:after {
+  width: 8px;
+  height: 8px;
+  border-radius: 15px;
+
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 5px solid rgb(101, 52, 255);
+}
