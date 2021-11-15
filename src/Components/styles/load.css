@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: sans-serif;
+}
+.load-container {
+  width: 100vw;
+  display: block;
+  padding: 25px 0 0 25px;
+  height: 100px;
+}
+
+.circle {
+  background: rgb(245, 245, 247);
+  user-select: none;
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.load-info {
+  display: inline-block;
+  height: 100%;
+  padding: 20px 0 0 25px;
+  vertical-align: top;
+}
+.load-text {
+  background: rgb(245, 245, 247);
+  width: 180px;
+  border-radius: 10px;
+  height: 18px;
+}
+.load-additional-text {
+  background: rgb(245, 245, 247);
+  width: 90px;
+  border-radius: 10px;
+  height: 12px;
+  margin-top: 10px;
+}

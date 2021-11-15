@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: sans-serif;
+}
+
+.title {
+  display: block;
+  padding: 25px 0 25px 25px;
+}
+
+.searchline-container {
+  position: relative;
+  display: block;
+  margin: 0 25px 0 25px;
+}
+
+.searchicon {
+  padding: 10px 0 10px 15px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.filtericon {
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  right: 0;
+  position: absolute;
+  margin-right: 0;
+  margin-left: auto;
+  padding: 10px 15px 10px 0;
+}
+
+.searchline {
+  box-sizing: border-box;
+  cursor: text;
+  background: rgb(247, 247, 248);
+  border-radius: 20px;
+  width: 100%;
+  border: none;
+  height: 50px;
+  padding-left: 60px;
+  outline: none;
+  font-size: 18px;
+}
+
+.list-selector {
+  list-style-type: horizontal;
+  padding-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  border-bottom: 1px rgb(225, 225, 226) solid;
+  padding-bottom: 10px;
+}
+
+.list-selector li {
+  font-size: 0px;
+  display: inline-block; /* display flex для выпадающего списка*/
+  margin-left: 13px;
+}
+.list-selector li a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px 0 10px 0;
+  color: rgb(151, 151, 155);
+}
+.list-selector li a:active {
+  border-bottom: 2px rgb(101, 52, 255) solid;
+  color: #000;
+  font-weight: bold;
+}
+.list-selector li a:focus {
+  border-bottom: 2px rgb(101, 52, 255) solid;
+  color: #000;
+  font-weight: bold;
+}
+
+.active {
+  border-bottom: 2px rgb(101, 52, 255) solid;
+  color: #000;
+  font-weight: bold;
+}
+
+.worker-container {
+  display: block;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  width: 100wv;
+  height: 100px;
+}
+
+.worker-avatar {
+  user-select: none;
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.worker-info {
+  display: inline-block;
+  height: 100%;
+  padding: 20px 0 20px 25px;
+  vertical-align: top;
+}
+.worker-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.worker-tag {
+  font-size: 15px;
+  color: rgb(190, 190, 192);
+}
+.worker-departament {
+  font-size: 12px;
+}
