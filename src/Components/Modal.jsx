@@ -3,7 +3,6 @@ import './styles/modal.css';
 import Image from './images/cross.png';
 
 const Modal = ({ isOpen, setIsOpen, order, orderfunc }) => {
-  console.log(isOpen, setIsOpen, order);
   return (
     <div>
       {isOpen === true && (
