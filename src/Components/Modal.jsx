@@ -4,7 +4,7 @@ import Image from './images/cross.png';
 
 const Modal = ({ isOpen, setIsOpen, order, orderfunc }) => {
   return (
-    <div>
+    <div className='modal-container'>
       {isOpen === true && (
         <div className="modal-overlay" onClick={() => setIsOpen()}>
           <div className="modal-window" onClick={(e) => e.stopPropagation()}>

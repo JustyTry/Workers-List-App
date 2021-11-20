@@ -26,8 +26,7 @@
   position: absolute;
 }
 .filtericon {
-  cursor: pointer;
-  width: 40px;
+  filter: invert(10%) sepia(97%) saturate(7488%) hue-rotate(243deg) brightness(89%) contrast(133%);
   height: 30px;
   right: 0;
   position: absolute;
@@ -60,13 +59,14 @@
 
 .list-selector li {
   font-size: 0px;
-  display: inline-block; /* display flex для выпадающего списка*/
+  margin: 0;
+  display: inline-block; 
   margin-left: 13px;
 }
 .list-selector li a {
   font-size: 18px;
   text-decoration: none;
-  padding: 15px 0 10px 0;
+  padding: 15px 10px 10px 10px;
   color: rgb(151, 151, 155);
 }
 .list-selector li a:active {
@@ -92,6 +92,7 @@
   padding-bottom: 10px;
   width: 100wv;
   height: 100px;
+  position: relative;
 }
 
 .worker-avatar {
@@ -117,4 +118,12 @@
 }
 .worker-departament {
   font-size: 12px;
+}
+.birth-day{
+  position: absolute;
+  vertical-align: top;
+  top: 25%;
+  left:auto;
+  color:rgb(151, 151, 155);
+  right: 15px;
 }

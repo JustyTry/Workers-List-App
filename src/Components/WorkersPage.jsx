@@ -48,6 +48,9 @@ export default class WorkersPage extends React.Component {
         this.setState({ hasError: true });
         console.log(error);
       });
+    window.addEventListener('online', () => console.log("online"))
+    window.addEventListener("offline", () => console.log("offline"))
+    window.addEventListener("load", () => console.log("load"))
   }
 
   departmentFilter(val) {
@@ -97,25 +100,24 @@ export default class WorkersPage extends React.Component {
             return <Worker record={currentrecord} key={currentrecord.id} />;
           });
       } else {
-        return this.state.filterworkers
-          .sort(function (a, b) {
-            if (
-              new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth() !== 0 &&
-              new Date(a.birthday).getMonth() - new Date().getMonth() >= 0
-            ) {
-              
-              return new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth();
-            } else {
-              if (new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth() !== 0) {
-                return new Date(a.birthday).getMonth() - new Date(b.birthday).getMonth();
-              } else {
-                return new Date(a.birthday).getDate() - new Date(b.birthday).getDate();
-              }
-            }
-          })
-          .reverse()
-          .map((currentrecord) => {
-            return <Worker record={currentrecord} key={currentrecord.id} />;
+        const filterworkersDataFirst = this.state.filterworkers.filter(worker => { const birthdayDate = new Date(worker.birthday); const currentDate = new Date(); return new Date(0, currentDate.getMonth(), currentDate.getDate()) < new Date(0, birthdayDate.getMonth(), birthdayDate.getDate()) && new Date(0, birthdayDate.getMonth(), birthdayDate.getDate()) < new Date(1, 1, 1) }).sort((a, b) => {
+          const firstDate = new Date(a.birthday)
+          const secondDate = new Date(b.birthday)
+
+          return new Date(0, firstDate.getMonth(), firstDate.getDate()) > new Date(0, secondDate.getMonth(), secondDate.getDate()) ? 1 : -1
+        })
+
+        const filterworkersDataSecond = this.state.filterworkers.filter(worker => { const birthdayDate = new Date(worker.birthday); const currentDate = new Date(); return !(new Date(0, currentDate.getMonth(), currentDate.getDate()) < new Date(0, birthdayDate.getMonth(), birthdayDate.getDate()) && new Date(0, birthdayDate.getMonth(), birthdayDate.getDate()) < new Date(1, 1, 1)) }).sort((a, b) => {
+          const firstDate = new Date(a.birthday)
+          const secondDate = new Date(b.birthday)
+
+          return new Date(0, firstDate.getMonth(), firstDate.getDate()) > new Date(0, secondDate.getMonth(), secondDate.getDate()) ? 1 : -1
+        })
+
+        const filterworkersData = [...filterworkersDataFirst, ...filterworkersDataSecond]
+        console.log(filterworkersData)
+        return filterworkersData.map((currentrecord) => {
+            return <Worker record={currentrecord} order={this.state.sortBy} key={currentrecord.id} />;
           });
       }
     } else {
