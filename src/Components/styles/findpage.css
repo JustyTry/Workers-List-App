@@ -14,21 +14,32 @@
 }
 
 .searchline-container {
+  caret-color: rgb(101, 52, 255);
   position: relative;
   display: block;
   margin: 0 25px 0 25px;
 }
 
 .searchicon {
-  padding: 10px 0 10px 15px;
+  padding: 5px 0 10px 15px;
   width: 30px;
-  height: 30px;
+  height: 40px;
   position: absolute;
 }
 .filtericon {
+  height: 30px;
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+  margin-right: 0;
+  margin-left: auto;
+  padding: 10px 15px 10px 0;
+}
+.filtericon-active {
   filter: invert(10%) sepia(97%) saturate(7488%) hue-rotate(243deg) brightness(89%) contrast(133%);
   height: 30px;
   right: 0;
+  cursor: pointer;
   position: absolute;
   margin-right: 0;
   margin-left: auto;
@@ -60,7 +71,7 @@
 .list-selector li {
   font-size: 0px;
   margin: 0;
-  display: inline-block; 
+  display: inline-block;
   margin-left: 13px;
 }
 .list-selector li a {
@@ -69,12 +80,15 @@
   padding: 15px 10px 10px 10px;
   color: rgb(151, 151, 155);
 }
+
 .list-selector li a:active {
+  outline: none;
   border-bottom: 2px rgb(101, 52, 255) solid;
   color: #000;
   font-weight: bold;
 }
 .list-selector li a:focus {
+  outline: none;
   border-bottom: 2px rgb(101, 52, 255) solid;
   color: #000;
   font-weight: bold;
@@ -117,13 +131,15 @@
   color: rgb(190, 190, 192);
 }
 .worker-departament {
-  font-size: 12px;
+  font-size: 14px;
+  color: rgb(151, 151, 155);
 }
-.birth-day{
+.birth-day {
+  font-size: 18px;
   position: absolute;
   vertical-align: top;
   top: 25%;
-  left:auto;
-  color:rgb(151, 151, 155);
-  right: 15px;
+  left: auto;
+  color: rgb(85, 85, 92);
+  margin-right: 35px;
 }
