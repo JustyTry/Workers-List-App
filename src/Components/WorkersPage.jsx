@@ -158,7 +158,7 @@ export default class WorkersPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main-container">
         <div className="title">
           <h1>Поиск</h1>
         </div>

@@ -8,6 +8,11 @@
   font-family: sans-serif;
 }
 
+.main-container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
 .title {
   display: block;
   padding: 25px 0 25px 25px;
@@ -142,4 +147,41 @@
   left: auto;
   color: rgb(85, 85, 92);
   margin-right: 35px;
+}
+
+@media (max-width: 1920px) {
+  .main-container {
+    max-width: 1620px;
+  }
+}
+@media (max-width: 1600px) {
+  .main-container {
+    max-width: 1220px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    max-width: none;
+  }
+  .list-selector li a {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .main-container {
+    max-width: none;
+  }
+  .worker-info {
+    max-width: 150px;
+  }
+  .searchline {
+    overflow: hidden;
+    font-size: 13px;
+  }
 }
