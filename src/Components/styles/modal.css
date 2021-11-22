@@ -108,3 +108,13 @@ input[type='radio']:checked:after {
   visibility: visible;
   border: 5px solid rgb(101, 52, 255);
 }
+@media (max-width: 768px) {
+  .modal-window {
+    max-width: 481px;
+  }
+}
+@media (max-width: 480px) {
+  .modal-window {
+    max-width: 320px;
+  }
+}
